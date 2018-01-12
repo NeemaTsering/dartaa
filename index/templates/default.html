@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"><!--to declare the language of document-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--To ensure proper rendering and touch zooming and to set the width of the page to follow screen width-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    {% block head %}
+    <title>Under Construction</title>  <!--name of the web page-->
+    <meta charset="utf-8"><!--utf-8 character set for character encoding-->
+    <style>
+    body {
+        background-color: seashell;
+    }
+    .navbar {
+        min-height: 65px;
+        width: 106%;
+    }
+    </style>
+    {% endblock %}
+</head>
+
+<body>
+<div class="container"><!--to wrap the contents of the site in a fixed width-->
+    
+    <div class="container">
+        <section class="container" style="background-color:#ccccff;">
+            <div class="row"> <!--to create 1st row-->
+                <div class="col-md-12"><!--creating column for small laptops-->
+                    <div class="col-xs-6 col-sm-3 col-md-4"><!--seperating column for the logo in different devices-->
+                        <div class="logo"><img src="C:\Users\Dell 1\Desktop\bootstrap project\image\npp.png" width="200" height="150"></a></div>    <!--Need to change the image location-->
+
+                    <!--creating logo class and giving name and address and fixing the size of logo-->
+                    </div>
+                    <div class="eng-logo col-md-8 col-xs-12 row"> <!--separatimg column of 1st row for text-->
+                        <h4>Government of Nepal</h4>
+                        <h4 style="margin-top:-5px;">MINISTRY OF PHYSICAL INFRASTRUTURE AND TRANSPORT</h4>
+                        <h1>DEPARTMENT OF TRANSPORT MANAGEMENT</h1>
+                        <h4>PULCHOWK, KATHMANDU</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse"><!--creating a black navigation bar-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav navbar-nav"><!--to set the nav-bar in default position-->
+                            <li class="active"><a href="/">Home</a></li><!--to create the active element of nav-bar-->
+                            <li><a href="#">Notice</a></li> <!--creating lists of nav-bar and giving it address-->
+                            <li><a href="#">Practice</a></li>
+                            <li><a href="#">Vehicle fare</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                                    href="#">Register<span class="caret"></span></a>
+                                <!--creating a dropdown menu-->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Driving License</a></li>
+                                    <!--creating lists of dropdown menu and giving it address-->
+                                    <li><a href="#">Vehicle Registration</a></li>
+                                    <li><a href="#">form 2</a></li>
+                                    <li><a href="#">form 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="text-center"><a href="#">Contact us</a></li>
+                            <li class="text-center"><a href="#">FAQ</a></li>
+                            <li class="text-center"><a href="#">Photo gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+{% block body %}
+<h1>This page is under construction</h1>
+{% endblock %}
+</body>
+</html>
