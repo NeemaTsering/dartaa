@@ -17,7 +17,7 @@
 			<br>
 			{% for item in news %}
 				<div class="container center-block" style="background-color: #d1d1e0; width: 90%;">
-					<h3 class ="text-center"><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h1>
+					<h3 class ="text-center"><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h3>
 					<p>{{item.author}}</p>
 					<p>{{item.text|truncatechars:55|linebreaksbr}}</p>
 					
