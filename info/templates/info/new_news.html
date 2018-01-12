@@ -1,5 +1,9 @@
 {% extends 'default.html' %}
 
+{% block head %}
+	<title>New article</title>
+{% endblock %}
+
 {% block body %}
 	<h1>New Article</h1>
 	<form method="POST" class="post-form">{% csrf_token %}

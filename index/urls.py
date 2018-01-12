@@ -3,5 +3,5 @@ from . import views
 urlpatterns=[
 	url(r'^$', views.index, name='index'),
 	url(r'^news/(?P<pk>\d+)/$', views.news_detail, name='news_detail'),
-	url(r'^post', include('info.urls')),
+	url(r'^archive', include('info.urls')),
 ]

@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body %}
+	<a href="{% url 'new_news' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 	{% for item in news %}
 		<h1>{{item.title}}</h1>
 		<p>{{item.author}}</p>
