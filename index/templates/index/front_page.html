@@ -50,7 +50,8 @@
 </div>
 
 {% for item in news %}
-<a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a>
+<h3><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h3>
+<p>{{item.text|truncatechars:100}}</p>
 {% endfor %}
 
 {% endblock %}

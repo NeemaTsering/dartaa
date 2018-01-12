@@ -7,8 +7,9 @@
 {% block body %}
 	<a href="{% url 'new_news' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 	{% for item in news %}
-		<h1>{{item.title}}</h1>
+		<h1><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h1>
 		<p>{{item.author}}</p>
-		<p>{{item.text}}</p>
+		<p>{{item.text|truncatechars:55|linebreaksbr}}</p>
+		<br>
 	{% endfor %}
 {% endblock %}

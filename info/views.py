@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import NewNews 
 from index.models import News
 # Create your views here.
@@ -9,6 +9,7 @@ def new_news(request):
 			post=form.save(commit=False)
 			post.author=request.user
 			post.save()
+			return redirect('news_detail', pk=post.pk)
 	else:
 		form=NewNews()
 		context={"form":form}
