@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+
+{% block head %}
+	<title>Articles archive</title>
+{% endblock %}
+
+{% block body %}
+	{% for item in news %}
+		<h1>{{item.title}}</h1>
+		<p>{{item.author}}</p>
+		<p>{{item.text}}</p>
+	{% endfor %}
+{% endblock %}
