@@ -8,23 +8,22 @@
 	<div class= "container-fluid">
 		<div class="container">
 			<div class = "container-fluid"  style="background-color:#e6e6e6;">
-			<br>
-			<div class="container row">
-				<div class="text-right" style="padding-right: 50px"><strong>Add Article</strong>      
-			<a href="{% url 'new_news' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-			</div>
-			<br>
-			<br>
-			{% for item in news %}
-				<div class="container center-block" style="background-color: #d1d1e0; width: 90%;">
-					<h3 class ="text-center"><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h3>
-					<p>{{item.author}}</p>
-					<p>{{item.text|truncatechars:55|linebreaksbr}}</p>
-					
-				</div>
 				<br>
-			{% endfor %}
-		</div>
+					<div class="text-right" style="padding-right: 50px"><strong>Add Article</strong>      
+						<a href="{% url 'new_news' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+					</div>
+					<br>
+					<br>
+					{% for item in news %}
+						<div class="container center-block" style="background-color: #d1d1e0; width: 90%;">
+							<h3 class ="text-center"><a href="{% url 'news_detail' pk=item.pk %}">{{item.title}}</a></h3>
+							<p>{{item.author}}</p>
+							<p>{{item.text|truncatechars:55|linebreaksbr}}</p>
+							
+						</div>
+						<br>
+					{% endfor %}
+			</div>
 		</div>
 	</div>
 {% endblock %}
